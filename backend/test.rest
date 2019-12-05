@@ -1,0 +1,39 @@
+### FIND ALL INVOICES
+GET http://localhost:8080/api/invoices
+
+
+### FIND INVOICE BY ID
+GET http://localhost:8080/api/invoices/5de7e38cbf809c30cc3054ef
+
+
+### CREATE INVOICE
+POST http://localhost:8080/api/invoices
+content-type: application/json
+
+{
+    "item": "Facebook",
+    "qty":"511",
+    "date":"2019-12-05",
+    "due":"2019-12-17",
+    "rate":12,
+    "tax":100
+}
+
+
+### UPDATE INVOICE
+PUT http://localhost:8080/api/invoices/5de7e3debf809c30cc3054f0
+content-type: application/json
+
+{
+    "item": "Twitter",
+    "qty":"511",
+    "date":"2019-12-05",
+    "due":"2019-12-17",
+    "rate":12,
+    "tax":100
+}
+
+
+
+### DELETE INVOICE
+DELETE http://localhost:8080/api/invoices/5de7e38cbf809c30cc3054ef
